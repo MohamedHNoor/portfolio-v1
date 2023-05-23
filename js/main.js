@@ -5,7 +5,7 @@ const sidebar = document.querySelector('#sidebar');
 const date = document.querySelector('#date');
 
 // add fixed class to navbar
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
   if (window.pageYOffset > 80) {
     navbar.classList.add('navbar-fixed');
   } else {
@@ -14,10 +14,10 @@ window.addEventListener('scroll', function () {
 });
 
 // show sidebar
-navBtn.addEventListener('click', function () {
+navBtn.addEventListener('click', () => {
   sidebar.classList.add('show-sidebar');
 });
-closeBtn.addEventListener('click', function () {
+closeBtn.addEventListener('click', () => {
   sidebar.classList.remove('show-sidebar');
 });
 // set year
