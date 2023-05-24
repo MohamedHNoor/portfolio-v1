@@ -181,3 +181,9 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+  color: var(--clr-secondary);
+}
