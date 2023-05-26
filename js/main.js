@@ -1,8 +1,14 @@
+import data from './data.js';
+
 const navbar = document.querySelector('#nav');
 const navBtn = document.querySelector('#nav-btn');
 const closeBtn = document.querySelector('#close-btn');
 const sidebar = document.querySelector('#sidebar');
 // const date = document.querySelector('#date');
+
+const container = document.querySelector('.slide-container');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
 
 // add fixed class to navbar
 window.addEventListener('scroll', () => {
@@ -17,6 +23,7 @@ window.addEventListener('scroll', () => {
 navBtn.addEventListener('click', () => {
   sidebar.classList.add('show-sidebar');
 });
+
 closeBtn.addEventListener('click', () => {
   sidebar.classList.remove('show-sidebar');
 });
@@ -24,40 +31,93 @@ closeBtn.addEventListener('click', () => {
 // date.innerHTML = new Date().getFullYear();
 
 // project slider
+// if length is 1 hide buttons
+if (data.length === 1) {
+  nextBtn.style.display = 'none';
+  prevBtn.style.display = 'none';
+}
 
-const slides = document.querySelectorAll('.slide');
-const nextBtn = document.querySelector('.nextBtn');
-const prevBtn = document.querySelector('.prevBtn');
+// if length is 2, add copies of slides
+let projects = [...data];
+if (data.length === 2) {
+  projects = [...data, ...data];
+}
 
-slides.forEach((slide, index) => {
-  slide.style.left = `${index * 100}%`;
-});
+container.innerHTML = projects
+  .map((project, slideIndex) => {
+    const {
+      img, name, text, live, code,
+    } = project;
 
-let counter = 0;
+    let position = 'next';
 
-const slider = () => {
-  if (counter < slides.length - 1) {
-    nextBtn.style.display = 'block';
-  } else {
-    nextBtn.style.display = 'none';
+    if (slideIndex === 0) {
+      position = 'active';
+    }
+    if (slideIndex === projects.length - 1) {
+      position = 'last';
+    }
+    if (data.length <= 1) {
+      position = 'active';
+    }
+    return `<article class="slide ${position}">
+    <img
+      src="${img}"
+      class="img"
+      alt="peter doe"
+    />
+    <div class="project-content">
+      <h4 class="project-title">${name}</h4>
+      <p class="protect-text">
+        ${text}
+      </p>
+      <ul class="stacks">
+        ${project.tecks.map((teck) => `<li>${teck}</li>`).join('')}
+      </ul>
+      <div class="project-btns">
+        <a href="${live}" class="btn"
+          >live <i class="fa fa-light fa-arrow-up-right-from-square"></i
+        ></a>
+        <a href="${code}" class="btn">code <i class="fa-solid fa-code"></i></a>
+      </div>
+    </div>
+  </article>`;
+  })
+  .join('');
+
+const startSlider = (type) => {
+  // get all three slides active,last next
+  const active = document.querySelector('.active');
+  const last = document.querySelector('.last');
+  let next = active.nextElementSibling;
+
+  if (!next) {
+    next = container.firstElementChild;
   }
-  if (counter > 0) {
-    prevBtn.style.display = 'block';
-  } else {
-    prevBtn.style.display = 'none';
-  }
+  active.classList.remove('active');
+  last.classList.remove('last');
+  next.classList.remove('next');
 
-  slides.forEach((slide) => {
-    slide.style.transform = `translateX(-${counter * 100}%)`;
-  });
+  if (type === 'prev') {
+    active.classList.add('next');
+    last.classList.add('active');
+    next = last.previousElementSibling;
+    if (!next) {
+      next = container.lastElementChild;
+    }
+    next.classList.remove('next');
+    next.classList.add('last');
+    return;
+  }
+  active.classList.add('last');
+  last.classList.add('next');
+  next.classList.add('active');
 };
 
 nextBtn.addEventListener('click', () => {
-  counter += 1;
-  slider();
+  startSlider();
 });
 
 prevBtn.addEventListener('click', () => {
-  counter -= 1;
-  slider();
+  startSlider('prev');
 });
