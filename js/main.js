@@ -45,7 +45,9 @@ if (data.length === 2) {
 
 container.innerHTML = projects
   .map((project, slideIndex) => {
-    const { img, name, text, live, code } = project;
+    const {
+      img, name, text, live, code,
+    } = project;
 
     let position = 'next';
 
