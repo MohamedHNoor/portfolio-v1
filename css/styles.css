@@ -206,6 +206,7 @@
 
   .hero-info p {
     width: 100%;
+    line-height: 32px;
   }
 
   .hero-img {
@@ -369,5 +370,67 @@
   .project-btns {
     margin-bottom: 0;
     margin-top: 3rem;
+  }
+}
+
+/* about section */
+.about-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-center {
+  display: grid;
+  gap: 3rem 2rem;
+}
+
+.about-info p {
+  line-height: 32px;
+  color: #42526e;
+}
+
+.service {
+  background: #ebf0ee;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border: 1px solid #c1c7d0;
+}
+
+.service-icon {
+  font-size: 2rem;
+  height: 10rem;
+  margin: 0;
+}
+
+.service h4 {
+  margin-bottom: 1.5rem;
+  color: var(--clr-secondary);
+}
+
+.service ul li {
+  background: #fff;
+}
+
+@media screen and (min-width: 676px) {
+  .services-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .services-center {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .about-info {
+    align-self: center;
   }
 }

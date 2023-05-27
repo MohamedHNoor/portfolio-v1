@@ -76,9 +76,9 @@ container.innerHTML = projects
       </ul>
       <div class="project-btns">
         <a href="${live}" class="btn"
-          >live <i class="fa fa-light fa-arrow-up-right-from-square"></i
+          >Live <i class="fa fa-light fa-arrow-up-right-from-square"></i
         ></a>
-        <a href="${code}" class="btn">code <i class="fa-solid fa-code"></i></a>
+        <a href="${code}" class="btn">Code <i class="fa-solid fa-code"></i></a>
       </div>
     </div>
   </article>`;

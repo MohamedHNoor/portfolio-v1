@@ -136,7 +136,7 @@ p {
 /*  global classes */
 
 .btn {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: var(--clr-primary);
   color: var(--clr-white);
   padding: 0.375rem 0.75rem;
@@ -149,7 +149,7 @@ p {
   border: 2px solid transparent;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
+  border-radius: 4px;
 }
 
 .btn:hover {
@@ -158,7 +158,7 @@ p {
 
 /* section */
 .section {
-  padding: 5rem 0;
+  padding: 5rem 0 0 0;
 }
 
 .section-center {
