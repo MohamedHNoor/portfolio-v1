@@ -4,6 +4,7 @@ const navbar = document.querySelector('#nav');
 const navBtn = document.querySelector('#nav-btn');
 const closeBtn = document.querySelector('#close-btn');
 const sidebar = document.querySelector('#sidebar');
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
 // const date = document.querySelector('#date');
 
 const container = document.querySelector('.slide-container');
@@ -22,6 +23,12 @@ window.addEventListener('scroll', () => {
 // show sidebar
 navBtn.addEventListener('click', () => {
   sidebar.classList.add('show-sidebar');
+});
+
+sidebarLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    sidebar.classList.remove('show-sidebar');
+  });
 });
 
 closeBtn.addEventListener('click', () => {
