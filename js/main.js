@@ -52,9 +52,7 @@ if (data.length === 2) {
 
 container.innerHTML = projects
   .map((project, slideIndex) => {
-    const {
-      img, name, text, live, code,
-    } = project;
+    const { img, name, text, live, code } = project;
 
     let position = 'next';
 
@@ -82,10 +80,11 @@ container.innerHTML = projects
         ${project.tecks.map((teck) => `<li>${teck}</li>`).join('')}
       </ul>
       <div class="project-btns">
-        <a href="${live}" class="btn"
-          >Live <i class="fa fa-light fa-arrow-up-right-from-square"></i
+        <a href="${live}" class="btn target="_blank"
+        rel="noopener" >Live <i class="fa fa-light fa-arrow-up-right-from-square"></i
         ></a>
-        <a href="${code}" class="btn">Code <i class="fa-solid fa-code"></i></a>
+        <a href="${code}" class="btn" target="_blank"
+        rel="noopener" >Code <i class="fa-solid fa-code"></i></a>
       </div>
     </div>
   </article>`;
