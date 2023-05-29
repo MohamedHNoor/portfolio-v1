@@ -244,7 +244,7 @@
 .slide-container {
   display: flex;
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -447,15 +447,14 @@
   margin: 5rem 0;
   display: grid;
   place-items: center;
-  -webkit-clip-path:
-    polygon(
-      50% 0%,
-      100% 10%,
-      100% 90%,
-      50% 100%,
-      0 90%,
-      0 10%
-    );
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 10%,
+    100% 90%,
+    50% 100%,
+    0 90%,
+    0 10%
+  );
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
 }
 
