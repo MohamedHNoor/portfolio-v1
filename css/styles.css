@@ -244,7 +244,7 @@
 .slide-container {
   display: flex;
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -531,4 +531,22 @@
   .btn-form {
     justify-self: start;
   }
+}
+
+/* footer section */
+.footer {
+  border-top: 1px solid #dfe1e6;
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.footer .social-icons,
+.footer p {
+  margin: 0;
+}
+
+.footer p {
+  text-align: center;
 }

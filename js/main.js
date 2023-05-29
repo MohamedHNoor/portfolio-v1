@@ -5,7 +5,7 @@ const navBtn = document.querySelector('#nav-btn');
 const closeBtn = document.querySelector('#close-btn');
 const sidebar = document.querySelector('#sidebar');
 const sidebarLinks = document.querySelectorAll('.sidebar-link');
-// const date = document.querySelector('#date');
+const date = document.querySelector('#date');
 
 const container = document.querySelector('.slide-container');
 const nextBtn = document.querySelector('.next-btn');
@@ -34,8 +34,9 @@ sidebarLinks.forEach((link) => {
 closeBtn.addEventListener('click', () => {
   sidebar.classList.remove('show-sidebar');
 });
+
 // set year
-// date.innerHTML = new Date().getFullYear();
+date.innerHTML = new Date().getFullYear();
 
 // project slider
 // if length is 1 hide buttons
