@@ -447,15 +447,14 @@
   margin: 5rem 0;
   display: grid;
   place-items: center;
-  -webkit-clip-path:
-    polygon(
-      50% 0%,
-      100% 10%,
-      100% 90%,
-      50% 100%,
-      0 90%,
-      0 10%
-    );
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 10%,
+    100% 90%,
+    50% 100%,
+    0 90%,
+    0 10%
+  );
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
 }
 
@@ -531,4 +530,22 @@
   .btn-form {
     justify-self: start;
   }
+}
+
+/* footer section */
+.footer {
+  border-top: 1px solid #dfe1e6;
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.footer .social-icons,
+.footer p {
+  margin: 0;
+}
+
+.footer p {
+  text-align: center;
 }
