@@ -43,6 +43,9 @@
 }
 
 /* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
 
 *,
 ::after,
@@ -154,6 +157,7 @@ p {
 
 .btn:hover {
   background: var(--clr-primary-dark);
+  transform: scale(1.05);
 }
 
 /* section */
