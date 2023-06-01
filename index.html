@@ -312,19 +312,19 @@
           to chat please get in touch.
         </h3>
 
-        <form action="#" class="form">
+        <form
+          action="https://formspree.io/f/xqkjapkj"
+          method="POST"
+          class="form"
+        >
+          <p class="error"></p>
           <input
             type="text"
             placeholder="Full name"
             required
             class="form-name"
           />
-          <input
-            type="email"
-            placeholder="Email address"
-            required
-            class="form-email"
-          />
+          <input type="email" placeholder="Email address" class="form-email" />
           <textarea
             name="msg"
             id="msg"
@@ -333,7 +333,7 @@
             class="form-text"
             placeholder="Hey, I'd like to connect to..."
           ></textarea>
-          <button class="btn btn-form" type="button">Get in touch</button>
+          <button class="btn btn-form" type="submit">Get in touch</button>
         </form>
       </div>
     </section>
@@ -396,6 +396,10 @@
           </a>
         </li>
       </ul>
+
+      <a href="mailto:mohmed.hassannoor114@gmail.com" class="contact-email"
+        >mohmed.hassannoor114@gmail.com</a
+      >
 
       <p>
         &copy; <span id="date"></span> Mohamed Hassan Noor. all rights reserved

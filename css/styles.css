@@ -541,6 +541,23 @@
   opacity: 0.5;
 }
 
+.form .error {
+  color: #f47174;
+  margin-bottom: 0;
+  justify-self: self-start;
+}
+
+.contact-email {
+  text-decoration: underline;
+  color: var(--clr-secondary);
+  transition: var(--transition);
+}
+
+.contact-email:hover {
+  color: var(--clr-primary);
+  transform: scale(1.05);
+}
+
 @media screen and (min-width: 768px) {
   .form-container {
     grid-template-columns: 1fr 1fr;

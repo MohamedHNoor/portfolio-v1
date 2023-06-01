@@ -18,7 +18,7 @@ const projects = [
     name: 'Budget App',
     tecks: ['Ruby on Rails', 'Bootstrap', 'PostgreSQL', 'Devise', 'RSpec'],
     text: 'A full stack mobile application that allows users to signup and create categories and add transactions to each category',
-    live: 'https://budget-app-wtfx.onrender.com/',
+    live: 'https://budget-app-lh6k.onrender.com/',
     code: 'https://github.com/MohamedHNoor/Budget-app',
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     name: 'Space Travels',
     tecks: ['React', 'Redux', 'JavaScript', 'Rest API'],
     text: 'A front-end web application that displays SpaceX Rockets using their API. Users can rent their favorite rockets and register for SpaceX missions',
-    live: 'https://space-travelers-bso5.onrender.com/',
+    live: 'https://space-travelers-plum.vercel.app/',
     code: 'https://github.com/MohamedHNoor/space-travelers',
   },
   {
