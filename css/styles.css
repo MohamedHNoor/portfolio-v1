@@ -252,8 +252,7 @@
   position: relative;
   height: 80vh;
   overflow: hidden;
-  box-shadow:
-    0 1px 2px 0 rgba(60, 64, 67, 0.3),
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
     0 2px 6px 2px rgba(60, 64, 67, 0.15);
   transition: var(--transition);
 }
@@ -418,8 +417,7 @@
   -webkit-transition: var(--transition);
   transition: var(--transition);
   border: 1px solid #c1c7d0;
-  box-shadow:
-    0 1px 2px 0 rgba(60, 64, 67, 0.3),
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
     0 2px 6px 2px rgba(60, 64, 67, 0.15);
 }
 
@@ -474,15 +472,14 @@
   margin: 5rem 0;
   display: grid;
   place-items: center;
-  -webkit-clip-path:
-    polygon(
-      50% 0%,
-      100% 10%,
-      100% 90%,
-      50% 100%,
-      0 90%,
-      0 10%
-    );
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 10%,
+    100% 90%,
+    50% 100%,
+    0 90%,
+    0 10%
+  );
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
 }
 
@@ -539,6 +536,23 @@
 
 ::placeholder {
   opacity: 0.5;
+}
+
+.form .error {
+  color: #f47174;
+  margin-bottom: 0;
+  justify-self: self-start;
+}
+
+.contact-email {
+  text-decoration: underline;
+  color: var(--clr-secondary);
+  transition: var(--transition);
+}
+
+.contact-email:hover {
+  color: var(--clr-primary);
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 768px) {

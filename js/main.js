@@ -53,9 +53,7 @@ if (data.length === 2) {
 
 container.innerHTML = projects
   .map((project, slideIndex) => {
-    const {
-      img, name, text, live, code,
-    } = project;
+    const { img, name, text, live, code } = project;
 
     let position = 'next';
 
@@ -129,4 +127,23 @@ nextBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', () => {
   startSlider('prev');
+});
+
+// form validation
+
+const form = document.querySelector('.form');
+const formEmail = document.querySelector('.form-email');
+const error = document.querySelector('.error');
+
+form.addEventListener('submit', (event) => {
+  if (formEmail.value.match(/^[a-z.0-9-_]+@[a-z.0-9-_]+$/)) {
+    error.classList.add('hide');
+    error.textContent = '';
+    formEmail.style.border = 'none';
+  } else {
+    event.preventDefault();
+    error.classList.remove('hide');
+    error.textContent = 'Please type your Email in lower case';
+    formEmail.style.border = '3px solid #f47174';
+  }
 });
