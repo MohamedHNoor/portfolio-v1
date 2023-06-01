@@ -29,7 +29,7 @@
   --clr-grey-7: hsl(211, 27%, 70%);
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-grey-10: #f1f5f8;
 
   /* fonts */
   --ff-primary: 'Roboto', sans-serif;
@@ -56,8 +56,8 @@ html {
 }
 
 body {
-  font-family: var(--ff-secondary);
-  color: #222;
+  font-family: var(--ff-primary);
+  color: var(--clr-secondary);
   line-height: 1.5;
   font-size: 0.875rem;
 }
