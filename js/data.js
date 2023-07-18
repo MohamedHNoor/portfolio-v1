@@ -36,7 +36,7 @@ const projects = [
     name: 'Todo List',
     tecks: ['React', 'JavaScript', 'CSS3'],
     text: 'This is a to-do list app where you can add, delete, submit and edit items. Double-click on an item to edit it, and press enter to resubmit',
-    live: 'https://mohamedhnoor.github.io/react-todo-app/',
+    live: 'https://mhnoor-react-todo-app.netlify.app/',
     code: 'https://github.com/MohamedHNoor/react-todo-app',
   },
 ];
